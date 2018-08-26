@@ -1,0 +1,159 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Batch	rbm.h	/^    template <typename... Arg> Batch(Arg&& ... arg): Parent(std::forward<Arg>(arg) ...) {}$/;"	f	struct:Batch
+Batch	rbm.h	/^struct Batch: public std::pair<std::vector<Vector>::iterator, std::vector<Vector>::iterator>$/;"	s
+Conf	rbm.h	/^    struct Conf $/;"	s	struct:RBM
+Conf	rbm.h	/^    struct Conf$/;"	s	struct:LRBM
+DeepBeliefNet	rbm.h	/^struct DeepBeliefNet : public LRBM$/;"	s
+Exception	mnist.h	/^    Exception(const std::string& msg): message_(msg) {}$/;"	f	struct:Exception
+Exception	mnist.h	/^struct Exception: public std::exception$/;"	s
+GradientContext	rbm.h	/^	GradientContext(Batch inputs, std::vector<std::vector<Vector>> & probs, int epoch)$/;"	f	struct:DeepBeliefNet::GradientContext
+GradientContext	rbm.h	/^    struct GradientContext$/;"	s	struct:DeepBeliefNet
+GzipFile	mnist.cpp	/^    GzipFile(const char *path, const char *mode)$/;"	f	struct:GzipFile
+GzipFile	mnist.cpp	/^struct GzipFile$/;"	s	file:
+HYLO_TIMER_H	Timer.h	10;"	d
+LINEAR	rbm.h	/^	LINEAR,$/;"	m	class:RBM::Type
+LRBM	rbm.h	/^struct LRBM \/\/ layered RBM$/;"	s
+LightVector	v.h	/^	template <typename... Arg> LightVector(Arg&& ... arg): Parent(std::forward<Arg>(arg) ...) {}$/;"	f	struct:v::LightVector
+LightVector	v.h	/^    struct LightVector: public std::pair<float *, float *>$/;"	s	namespace:v
+MAX_LEN_ALIAS	Timer.h	/^const int MAX_LEN_ALIAS = 100;$/;"	v
+MAX_NUM_TIMER	Timer.h	/^const int MAX_NUM_TIMER = 100;$/;"	v
+PCFreq	Timer.cpp	/^double PCFreq = 0.0;$/;"	v
+RBM	rbm.h	/^    RBM() {}$/;"	f	struct:RBM
+RBM	rbm.h	/^    RBM(size_t visible, size_t hidden)$/;"	f	struct:RBM
+RBM	rbm.h	/^struct RBM$/;"	s
+SIGMOID	rbm.h	/^	SIGMOID,$/;"	m	class:RBM::Type
+Sample	mnist.h	/^struct Sample$/;"	s
+Type	rbm.h	/^    enum class Type $/;"	c	struct:RBM
+Vector	v.h	/^typedef std::vector<float> Vector;$/;"	t
+_read	rbm.h	/^    template <typename T> static void _read(std::istream& is, T& v) { is.read(reinterpret_cast<char *>(&v), sizeof(v)); }$/;"	f	struct:RBM
+_sigmoid	rbm.cu	/^__device__ inline float _sigmoid(float x) $/;"	f
+_write	rbm.h	/^    template <typename T> static void _write(std::ostream& os, const T& v) { os.write(reinterpret_cast<const char *>(&v), sizeof(v)); }$/;"	f	struct:RBM
+activate_hidden	rbm.h	/^	static const Vector2& activate_hidden(const Vector1& visible, Vector2& hidden, const Vector3& bias_hidden, const Vector3& weight, Type type)$/;"	f	struct:RBM
+activate_hidden	rbm.h	/^    const Vector& activate_hidden(const Vector& visible, Vector& hidden) const {$/;"	f	struct:RBM
+activate_visible	rbm.cu	/^const Vector& RBM::activate_visible(const Vector& hidden, Vector& visible) const$/;"	f	class:RBM
+add_noise	rbm.h	/^    static const Vector& add_noise(const Vector& input, Vector& output)$/;"	f	struct:RBM
+batch_size_	rbm.h	/^	int max_epoch_ = 20, max_batches_ = 1000, batch_size_ = 30;$/;"	m	struct:LRBM::Conf
+begin	rbm.h	/^    Iterator begin() const { return first; }$/;"	f	struct:Batch
+bernoulli	rbm.cu	/^const Vector& bernoulli(const Vector& input, Vector& output)$/;"	f
+bias_hidden_	rbm.h	/^    Vector bias_visible_, bias_hidden_, bias_visible_inc_, bias_hidden_inc_;$/;"	m	struct:RBM
+bias_hidden_inc_	rbm.h	/^    Vector bias_visible_, bias_hidden_, bias_visible_inc_, bias_hidden_inc_;$/;"	m	struct:RBM
+bias_visible_	rbm.h	/^    Vector bias_visible_, bias_hidden_, bias_visible_inc_, bias_hidden_inc_;$/;"	m	struct:RBM
+bias_visible_inc_	rbm.h	/^    Vector bias_visible_, bias_hidden_, bias_visible_inc_, bias_hidden_inc_;$/;"	m	struct:RBM
+build	rbm.cu	/^int LRBM::build(const std::vector<int>& layers, const std::vector<int>& adjust \/* = std::vector<int>() *\/)$/;"	f	class:LRBM
+calc_weight_incs_gpu	rbm.cu	/^__global__ void calc_weight_incs_gpu(int nh, int nv, int ns, float *diff, float *buf, float *weight_incs){}$/;"	f
+cnt	Timer.cpp	/^int cnt[MAX_NUM_TIMER] = {0,};$/;"	v
+d_bias_hidden	rbm.cu	/^float *d_bias_hidden;$/;"	v
+d_bias_visible	rbm.cu	/^float *d_bias_visible;$/;"	v
+d_buf_g	rbm.cu	/^float *d_buf_g;$/;"	v
+d_diff_g	rbm.cu	/^float *d_diff_g;$/;"	v
+d_h1	rbm.cu	/^float *d_h1;$/;"	v
+d_h2	rbm.cu	/^float *d_h2;$/;"	v
+d_hidden_bias_g	rbm.cu	/^float *d_hidden_bias_g;$/;"	v
+d_rand	rbm.cu	/^float *d_rand;$/;"	v
+d_v1	rbm.cu	/^float *d_v1;$/;"	v
+d_v2	rbm.cu	/^float *d_v2;$/;"	v
+d_w	rbm.cu	/^float *d_w;$/;"	v
+d_weight_g	rbm.cu	/^float *d_weight_g;$/;"	v
+d_weight_incs_g	rbm.cu	/^float *d_weight_incs_g;$/;"	v
+data	v.h	/^	float *data() const { return first; }$/;"	f	struct:v::LightVector
+data_	mnist.h	/^    std::vector<int> data_;$/;"	m	struct:Sample
+dot	v.h	/^    template <class Vector1, class Vector2> inline float dot(const Vector1&x, const Vector2& y) { $/;"	f	namespace:v
+dotprod_tr	rbm.cu	/^__device__ inline float dotprod_tr(int x, int y, int len, float *A, float *B, float bias)$/;"	f
+empty	rbm.h	/^    bool empty() const  { return first == second; }$/;"	f	struct:Batch
+empty	v.h	/^	bool empty() const  { return first == second; }$/;"	f	struct:v::LightVector
+end	rbm.h	/^    Iterator end() const { return second; }$/;"	f	struct:Batch
+endTimer	Timer.cpp	/^double endTimer(const char* timerName )$/;"	f
+endTimerp	Timer.cpp	/^double endTimerp(const char* timerName )$/;"	f
+epoch_	rbm.h	/^	int epoch_;$/;"	m	struct:DeepBeliefNet::GradientContext
+fine_tune	rbm.cu	/^int DeepBeliefNet::fine_tune(std::vector<Vector>& inputs, std::vector<Vector>& targets, $/;"	f	class:DeepBeliefNet
+forward_gpu_exp	rbm.cu	/^__global__ void forward_gpu_exp(int ns, int nh, int nv, float *v, float *w, float *h, float* bias){}$/;"	f
+forward_gpu_sigmoid	rbm.cu	/^__global__ void forward_gpu_sigmoid(int ns, int nh, int nv, float *v, float *w, float *h, float* bias){}$/;"	f
+fp_	mnist.cpp	/^    gzFile fp_;$/;"	m	struct:GzipFile	file:
+free_energy	rbm.h	/^    float free_energy() const {$/;"	f	struct:DeepBeliefNet
+free_energy	rbm.h	/^    virtual float free_energy() const$/;"	f	struct:RBM
+g_num_timer	Timer.cpp	/^int g_num_timer = 0;$/;"	v
+getTimer	Timer.cpp	/^double getTimer(const char* timerName )$/;"	f
+getTimerp	Timer.cpp	/^void getTimerp(const char* timerName )$/;"	f
+gradient	rbm.cu	/^int DeepBeliefNet::gradient(GradientContext& ctx, const Vector& weights, Vector& weight_incs, float& cost)$/;"	f	class:DeepBeliefNet
+gradient_gpu	rbm.cu	/^int DeepBeliefNet::gradient_gpu(GradientContext& ctx, const Vector& weights, Vector& weight_incs, float& cost)$/;"	f	class:DeepBeliefNet
+gradient_linear_gpu	rbm.cu	/^__global__ void gradient_linear_gpu(int ns, int nv, int nh, float *hd, float *w, float *vd){}$/;"	f
+gradient_non_linear_gpu	rbm.cu	/^__global__ void gradient_non_linear_gpu(int ns, int nv, int nh, float *hd, float *w, float *vd, float *v){}$/;"	f
+initTimer	Timer.cpp	/^bool initTimer()$/;"	f
+inputs_	rbm.h	/^	Batch inputs_;$/;"	m	struct:DeepBeliefNet::GradientContext
+isfinite	v.h	/^    inline bool isfinite(const Vector& x) { $/;"	f	namespace:v
+label_	mnist.h	/^    uint8_t label_;$/;"	m	struct:Sample
+learning_rate_	rbm.h	/^	float momentum_ = 0.5, weight_cost_ = 0.0002, learning_rate_ = 0.1;$/;"	m	struct:RBM::Conf
+li_ed	Timer.cpp	/^LARGE_INTEGER li_ed[MAX_NUM_TIMER];$/;"	v
+li_st	Timer.cpp	/^LARGE_INTEGER li_st[MAX_NUM_TIMER];$/;"	v
+load	rbm.cu	/^void LRBM::load(std::istream& is)$/;"	f	class:LRBM
+load	rbm.h	/^    void load(std::istream& is)$/;"	f	struct:RBM
+main	main.cpp	/^int main(int argc, const char *argv[])$/;"	f
+matmulGPU_addnoise_global	rbm.cu	/^__global__ void matmulGPU_addnoise_global(int nc, int nv, int nh, float *h,float *w, float *v, float* noise, float* bias){}$/;"	f
+matmulGPU_bernoulli_global	rbm.cu	/^__global__ void matmulGPU_bernoulli_global(int nc, int nv, int nh, float *h,float *w, float *v, float* hs, float* bias){}$/;"	f
+matmulGPU_exp_global	rbm.cu	/^__global__ void matmulGPU_exp_global(int nc, int nv, int nh, float *v,float *w, float *h, float* bias){}$/;"	f
+matmulGPU_global	rbm.cu	/^__global__ void matmulGPU_global(int nc, int nv, int nh, float *v, float *w, float *h, float* bias){}$/;"	f
+matmulGPU_sigmoid_global	rbm.cu	/^__global__ void matmulGPU_sigmoid_global(int nc, int nv, int nh, float *v,float *w, float *h, float* bias){}$/;"	f
+max_batches_	rbm.h	/^	int max_epoch_ = 20, max_batches_ = 1000, batch_size_ = 30;$/;"	m	struct:LRBM::Conf
+max_epoch_	rbm.h	/^	int max_epoch_ = 20, max_batches_ = 1000, batch_size_ = 30;$/;"	m	struct:LRBM::Conf
+max_iteration_	rbm.h	/^	int max_iteration_;$/;"	m	struct:DeepBeliefNet::GradientContext
+max_layer	rbm.h	/^    size_t max_layer() const { return rbms_.size(); }$/;"	f	struct:LRBM
+max_n_hidden	rbm.h	/^    int max_n_hidden = 0;$/;"	m	struct:LRBM
+max_n_visible	rbm.h	/^    int max_n_visible = 0;$/;"	m	struct:LRBM
+max_neurons	rbm.h	/^    int max_neurons = 0;$/;"	m	struct:LRBM
+message_	mnist.h	/^    std::string message_;$/;"	m	struct:Exception
+minimize	rbm.cu	/^int DeepBeliefNet::minimize(GradientContext& ctx, bool is_cuda)$/;"	f	class:DeepBeliefNet
+mirror	rbm.cu	/^int RBM::mirror(const RBM& rbm)$/;"	f	class:RBM
+mnist	mnist.h	/^namespace mnist $/;"	n
+momentum_	rbm.h	/^	float momentum_ = 0.5, weight_cost_ = 0.0002, learning_rate_ = 0.1;$/;"	m	struct:RBM::Conf
+noexcept	mnist.h	/^    ~Exception() noexcept(true) {}$/;"	f	struct:Exception
+num_hidden	rbm.h	/^    size_t num_hidden() const { return bias_hidden_.size(); }$/;"	f	struct:RBM
+num_visible	rbm.h	/^    size_t num_visible() const { return bias_visible_.size(); }$/;"	f	struct:RBM
+num_weight	rbm.h	/^    size_t num_weight() const { return weight_.size(); }$/;"	f	struct:RBM
+offsets	rbm.cu	/^std::vector<int> LRBM::offsets(int start) const$/;"	f	class:LRBM
+operator []	rbm.h	/^    Vector& operator[](size_t i) { return *(first + i); }$/;"	f	struct:Batch
+operator []	rbm.h	/^    const Vector& operator[](size_t i) const { return *(first + i); }$/;"	f	struct:Batch
+operator []	v.h	/^	float operator[](size_t i) const { return *(first + i); }$/;"	f	struct:v::LightVector
+operator []	v.h	/^	float& operator[](size_t i) { return *(first + i); }$/;"	f	struct:v::LightVector
+output_layer	rbm.h	/^    RBMP& output_layer() { return rbms_[rbms_.size() - 1]; }$/;"	f	struct:LRBM
+predict	rbm.cu	/^int DeepBeliefNet::predict(const Vector& sample, Vector& output, Vector& probs)$/;"	f	class:DeepBeliefNet
+pretrain	rbm.h	/^    virtual int pretrain(std::vector<Vector>& inputs, LRBM::Conf& conf, bool is_cuda = false)$/;"	f	struct:DeepBeliefNet
+probs_	rbm.h	/^	std::vector<std::vector<Vector>>& probs_;$/;"	m	struct:DeepBeliefNet::GradientContext
+rbms_	rbm.h	/^    std::vector<RBMP> rbms_;$/;"	m	struct:LRBM
+read	mnist.cpp	/^int mnist::read(const std::string& images, const std::string& labels, std::vector<Sample>& samples)$/;"	f	class:mnist
+read_byte	mnist.cpp	/^    uint8_t read_byte()$/;"	f	struct:GzipFile
+read_int	mnist.cpp	/^    int32_t read_int() $/;"	f	struct:GzipFile
+saxpy	v.h	/^    inline void saxpy(Vector& x, float g, const Vector& y) {$/;"	f	namespace:v
+saxpy	v.h	/^    inline void saxpy(float a, Vector& x, float g, const Vector& y) {$/;"	f	namespace:v
+saxpy2	v.h	/^    inline void saxpy2(Vector& x, float g, const Vector& y, float h, const Vector& z) {$/;"	f	namespace:v
+scale	v.h	/^    inline void scale(Vector& x, float g) {$/;"	f	namespace:v
+setTimer	Timer.cpp	/^void setTimer(const char* timerName )$/;"	f
+sigmoid	rbm.cu	/^float sigmoid(float x) $/;"	f
+size	rbm.h	/^    size_t size() const { return std::distance(first, second); }$/;"	f	struct:Batch
+size	v.h	/^	size_t size() const { return std::distance(first, second); }$/;"	f	struct:v::LightVector
+startTimer	Timer.cpp	/^void startTimer(const char* timerName )$/;"	f
+start_layer_	rbm.h	/^	int start_layer_;$/;"	m	struct:DeepBeliefNet::GradientContext
+store	rbm.cu	/^void LRBM::store(std::ostream& os) const$/;"	f	class:LRBM
+store	rbm.h	/^    void store(std::ostream& os) const$/;"	f	struct:RBM
+t	Timer.cpp	/^double t[MAX_NUM_TIMER] = {0,};$/;"	v
+targets_	rbm.h	/^	Batch targets_;$/;"	m	struct:DeepBeliefNet::GradientContext
+timer_alias	Timer.cpp	/^const char* timer_alias[MAX_NUM_TIMER];$/;"	v
+to_image	rbm.cu	/^void LRBM::to_image(Vector& image, int& width, int& height)$/;"	f	class:LRBM
+train	rbm.cu	/^float RBM::train(Batch inputs, const Conf& conf)$/;"	f	class:RBM
+train	rbm.cu	/^int DeepBeliefNet::train(std::vector<Vector>& inputs, std::vector<Vector>& labels, $/;"	f	class:DeepBeliefNet
+train_gpu	rbm.cu	/^float RBM::train_gpu(Batch inputs, const Conf& conf)$/;"	f	class:RBM
+tv_diff	Timer.cpp	/^struct timeval tv_st[MAX_NUM_TIMER], tv_ed[MAX_NUM_TIMER], tv_diff[MAX_NUM_TIMER];$/;"	v	typeref:struct:
+tv_ed	Timer.cpp	/^struct timeval tv_st[MAX_NUM_TIMER], tv_ed[MAX_NUM_TIMER], tv_diff[MAX_NUM_TIMER];$/;"	v	typeref:struct:
+tv_st	Timer.cpp	/^struct timeval tv_st[MAX_NUM_TIMER], tv_ed[MAX_NUM_TIMER], tv_diff[MAX_NUM_TIMER];$/;"	v	typeref:struct:timeval
+type_	rbm.h	/^    Type type_ = Type::SIGMOID;$/;"	m	struct:RBM
+unit	v.h	/^    inline void unit(Vector& x) {$/;"	f	namespace:v
+v	v.h	/^namespace v {$/;"	n
+weight_	rbm.h	/^    Vector weight_, weight_inc_;$/;"	m	struct:RBM
+weight_cost_	rbm.h	/^	float momentum_ = 0.5, weight_cost_ = 0.0002, learning_rate_ = 0.1;$/;"	m	struct:RBM::Conf
+weight_inc_	rbm.h	/^    Vector weight_, weight_inc_;$/;"	m	struct:RBM
+weight_incs_add_diff_gpu	rbm.cu	/^__global__ void weight_incs_add_diff_gpu(int ns, int nh, float *diff, float *weight_incs){}$/;"	f
+~GzipFile	mnist.cpp	/^    ~GzipFile() { if (fp_) gzclose(fp_); }$/;"	f	struct:GzipFile
